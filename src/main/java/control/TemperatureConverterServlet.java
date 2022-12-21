@@ -26,7 +26,16 @@ public class TemperatureConverterServlet extends HttpServlet {
             } else if (unit.equals("Fahrenheit")) {
                 convertedTemperature = (temperature - 32) * 5/9;
             }
-
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet TraitementCasesEtRadio</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Resume de ce qui a ete saisie</h1>");
+            out.println("<h2> nom : " + convertedTemperature + "</h2>");          
+            out.println("</body>");
+            out.println("</html>");
             // Store the result of the conversion in the request object
             request.setAttribute("convertedTemperature", convertedTemperature);
 
@@ -39,10 +48,13 @@ public class TemperatureConverterServlet extends HttpServlet {
             request.getRequestDispatcher("index.html").forward(request, response);
         }
     }
-
-   @Override
-protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-    processRequest(request, response);
-}
+    
+    
+    
+    
+          @Override
+                 protected void doPost(HttpServletRequest request, HttpServletResponse response)
+                 throws ServletException, IOException {
+             processRequest(request, response);
+            }
   }
