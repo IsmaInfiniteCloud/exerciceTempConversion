@@ -4,9 +4,17 @@
         <servlet-name>TemperatureConverterServlet</servlet-name>
         <servlet-class>control.TemperatureConverterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>messervlettes.HelloWorld</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TemperatureConverterServlet</servlet-name>
         <url-pattern>/TemperatureConverterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

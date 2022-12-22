@@ -40,7 +40,7 @@ public class TemperatureConverterServlet extends HttpServlet {
             request.setAttribute("convertedTemperature", convertedTemperature);
 
             // Redirect to the JSP for display of the result
-            request.getRequestDispatcher("result.html").forward(request, response);
+            request.getRequestDispatcher("result.jsp").forward(request, response);
         } catch (NumberFormatException ex) {
             // Handle invalid temperature input
             ex.printStackTrace();
